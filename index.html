@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+    <link rel="stylesheet" href="styles.css">
+    </style>
+    <script src="Engine/clickHandler.js" type="text/javascript"></script>
+    <script src="Engine/gameObject.js" type="text/javascript"></script>
+    <script src="Engine/seedrandom.js" type="text/javascript"></script>
+    <script src="Engine/gameObject-map.js" type="text/javascript"></script>
+    <script src="Engine/gameObject-buttons.js" type="text/javascript"></script>
+
+    <script src="Engine/gameObject-menus.js" type="text/javascript"></script>
+    <script src="Engine/gameObject-buttons-named.js" type="text/javascript"></script>
+    <script src="Engine/keyHandler.js" type="text/javascript"></script>
+    <script src="Engine/draw.js" type="text/javascript"></script>
+
+    <script src="Engine/game.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+    <script src="Experiences/Solar System Viewer/surfaceTiles.js" type="text/javascript"></script>
+
+    <script src="Experiences/Solar System Viewer/planets.js" type="text/javascript"></script>
+    <script src="Experiences/Solar System Viewer/solarSystem.js" type="text/javascript"></script>
+    <script src="Experiences/Solar System Viewer/sideMenus.js" type="text/javascript"></script>
+    <script src="Experiences/Solar System Viewer/tiles.js" type="text/javascript"></script>
+
+    <script src="Experiences/Solar System Viewer/research.js" type="text/javascript"></script>
+    <script src="Experiences/Solar System Viewer/transfers.js" type="text/javascript"></script>
+
+    <script src="Experiences/Solar System Viewer/views.js" type="text/javascript"></script>
+
+    <script src="Experiences/Board Games/views.js" type="text/javascript"></script>
+
+    <script src="Experiences/init.js" type="text/javascript"></script>
+
+
+
+
+</head>
+<body style="margin:0;">
+<canvas id="myCanvas" width="2400" height="1350"></canvas>
+<script>
+  var ctx;
+
+ main();
+
+
+
+  function main() {
+      canvasE = document.getElementById('myCanvas');
+      ctx= canvasE.getContext('2d');
+
+      width = canvasE.width;
+      height = canvasE.height;
+      canvasE.addEventListener("click", onClick, false);
+      canvasE.addEventListener("mousemove",mouseMove,false);
+      draw.unloadScrollBars();
+      topInit();
+      draw.draw();
+      setInterval(loop, 1000/60); //maybe someday we'll have some looping action?
+
+
+  }
+
+  function loop(){
+       draw.draw();
+       hoverFinder(camera.mouseX,camera.mouseY);
+
+
+
+  }
+
+
+
+</script>
+</body>
+</html>

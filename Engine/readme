@@ -1,0 +1,47 @@
+
+
+class gameObject
+    adds arts:{bgColor,bgShape,fill,decColor,dec}
+    adds grid:{x,y,sizeX,sizeY}
+
+Extended by... button, menu, map
+____
+
+____
+//Branch of Clickable Objects
+
+class button extends gameObject
+    adds click:{action,params,hoverObj}
+
+Extended by... namedObject
+Extended by... item
+
+
+class - nonownableObject - planet
+class - ownableObject - tile , vehicle , building , person (all clickables.... something beyond?)
+____
+
+class menu extends gameObject
+    adds layout:{} (controls visibility and camera of the object)
+    adds ObjectArray (this is where things get drawn!)(can be nested to show a map)
+
+class map extends gameObject
+    adds arrayOfButtons
+    adds views (grid, lineup, etc.)
+
+
+
+
+
+
+
+
+
+
+
+
+///////////after some reflection....
+
+
+levels are a collection of menus
+menus are a collection of maps, buttons, and gameObjects (art)

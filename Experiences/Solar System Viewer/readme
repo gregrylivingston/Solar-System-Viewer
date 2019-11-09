@@ -1,0 +1,33 @@
+
+
+Needs objects for
+
+
+player - stores player name, $$, maybe references to owned objects etc.
+
+permanent map states - what actually gets stored - let's store it and call it back later.
+
+
+
+
+
+buttons can be clicked but shouldnt they have subTypes (like up/down iterator, slide, that kind of thing?)
+
+
+How to wrap up this solar system experience quickly so I can go on to the second, more functional version of this program.
+
+---- Science just becomes a list of things to explore!
+---- Finish descriptions for moons, planets, and tilesets
+---- abstract icon sets (right now just tiles and icons) - these are object sets and NOT art sets.  They are just definitions for objects though.  So shouldn't those objects get created in the game instead of ever in the engine?
+---- mask out unused buttons
+---- clean up top panel
+---- improve mouse down rules for scrolling
+---- improve scrolling contextual rules
+
+
+
+Some thoughts on engine
+
+---adding video and images would be cool
+---should there be a foreground canvas AND a background canvasssssss
+--- can html elemnts be layered with this, is that worth working on?
